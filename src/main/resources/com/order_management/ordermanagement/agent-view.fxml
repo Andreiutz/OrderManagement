@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.order_management.ordermanagement.controller.AgentController"
+            prefHeight="400.0" prefWidth="600.0">
+    <TableView fx:id="productsTable">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="75" text="ID Product"/>
+            <TableColumn fx:id="nameColumn" prefWidth="75" text="Name"/>
+            <TableColumn fx:id="priceColumn" prefWidth="75" text="Price"/>
+            <TableColumn fx:id="descriptionColumn" prefWidth="75" text="Description"/>
+            <TableColumn fx:id="quantityColumn" prefWidth="75" text="Quantity"/>
+        </columns>
+    </TableView>
+    <Button onAction="#launchOrderController" text="Order Product"/>
+    <Button onAction="#logOut" text="Log out"/>
+</VBox>

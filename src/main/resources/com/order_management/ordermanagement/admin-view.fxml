@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Spinner?>
+<TabPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.order_management.ordermanagement.controller.AdminController">
+<tabs>
+    <Tab text="Manage Agents">
+        <content>
+            <HBox alignment="CENTER">
+               <children>
+                  <TableView fx:id="agentsTable" prefHeight="200.0">
+                    <columns>
+                      <TableColumn fx:id="columnAgentId" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="columnAgentName" prefWidth="75.0" text="Name" />
+                      <TableColumn fx:id="columnAgentEmail" prefWidth="75.0" text="Email" />
+                      <TableColumn fx:id="columnAgentPassword" prefWidth="75.0" text="Password" />
+                    </columns>
+                  </TableView>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField promptText="Agent Name"/>
+                        <TextField promptText="Agent Email"/>
+                        <TextField promptText="Agent Password"/>
+                        <Button mnemonicParsing="false" text="Add" />
+                        <Button mnemonicParsing="false" text="Modify" />
+                        <Button mnemonicParsing="false" text="Delete" />
+                     </children>
+                  </VBox>
+               </children></HBox>
+        </content>
+    </Tab>
+    <Tab text="Manage Products">
+        <content>
+            <HBox alignment="CENTER">
+                <children>
+                    <TableView fx:id="productsTable" prefHeight="200.0">
+                        <columns>
+                            <TableColumn fx:id="columnProductId" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="columnProductName" prefWidth="75.0" text="Name" />
+                            <TableColumn fx:id="columnProductPrice" prefWidth="75.0" text="Price" />
+                            <TableColumn fx:id="columnProductDescription" prefWidth="75.0" text="Description" />
+                            <TableColumn fx:id="columnProductQuantity" prefWidth="75.0" text="Quantity" />
+                        </columns>
+                    </TableView>
+                    <VBox prefHeight="200.0" prefWidth="100.0">
+                        <children>
+                            <TextField promptText="Product Name"/>
+                            <TextField promptText="Product Description"/>
+                            <TextField promptText="Price" />
+                            <Spinner min="0" max="100" promptText="Quantity"/>
+                            <Button mnemonicParsing="false" text="Add" />
+                            <Button mnemonicParsing="false" text="Modify" />
+                            <Button mnemonicParsing="false" text="Delete" />
+                        </children>
+                    </VBox>
+                </children></HBox>
+        </content>
+    </Tab>
+    <Tab text="Settings">
+        <GridPane alignment="center">
+            <Button onAction="#logOut" text="Log Out" GridPane.rowIndex="0" />
+            <columnConstraints>
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+    </Tab>
+</tabs>
+</TabPane>
